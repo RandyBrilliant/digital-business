@@ -6,30 +6,193 @@
   <title>Session 03 — Digital Marketing Fundamentals</title>
   <link rel="icon" href="../assets/img/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/deck.css">
+  <style>
+    /* Session 03 only — fill the 16:9 stage without changing other decks */
+    .s03 .slide-inner { gap: 18px; }
+    .s03 .row { min-height: 0; }
+    .s03 .grid { flex: 1; grid-auto-rows: 1fr; }
+    .s03 .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 26px 28px;
+    }
+    .s03 .stat {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 28px 26px;
+    }
+    .s03 .stat .num { font-size: 52px; }
+    .s03 .stat .cap { font-size: 22px; margin-top: 12px; }
+
+    .s03 .agenda {
+      flex: 1;
+      grid-auto-rows: 1fr;
+      gap: 18px 22px;
+    }
+    .s03 .agenda-item {
+      align-items: center;
+      padding: 22px 26px;
+    }
+    .s03 .agenda-item .n { font-size: 50px; }
+    .s03 .agenda-item h3 { font-size: 28px; }
+    .s03 .agenda-item p { font-size: 22px; }
+
+    .s03 .slide-title .slide-inner {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 36px;
+      align-items: center;
+      justify-content: stretch;
+      padding-bottom: 72px;
+    }
+    .s03 .slide-title h1 {
+      font-size: 86px;
+      max-width: none;
+    }
+    .s03 .slide-title .lede { font-size: 30px; max-width: 22ch; }
+    .s03 .title-copy { display: flex; flex-direction: column; gap: 22px; }
+    .s03 .title-art {
+      position: relative;
+      height: 100%;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .s03 .title-art .ghost {
+      position: absolute;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 320px;
+      font-weight: 600;
+      color: #fff;
+      opacity: 0.07;
+      line-height: 0.8;
+      letter-spacing: -0.06em;
+      pointer-events: none;
+    }
+    .s03 .title-funnel {
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .s03 .title-funnel .funnel-band { height: 88px; font-size: 22px; }
+
+    .s03 .funnel-band { height: 104px; font-size: 26px; }
+    .s03 .stage-list {
+      flex: 1;
+      justify-content: space-evenly;
+    }
+    .s03 .stage-row { align-items: center; }
+    .s03 .stage-row p { font-size: 26px; }
+
+    .s03 .side-panel {
+      flex: 0.72;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      background: var(--teal-soft);
+      border-radius: 18px;
+      padding: 28px 30px;
+      border-left: 8px solid var(--teal);
+    }
+    .s03 .side-panel.amber {
+      background: var(--amber-soft);
+      border-left-color: var(--amber);
+    }
+    .s03 .side-panel.ink {
+      background: #1c3a36;
+      border-left-color: #8ed8cf;
+      color: #f6f1e8;
+    }
+    .s03 .side-panel h3 { font-size: 32px; }
+    .s03 .side-panel p { font-size: 26px; }
+
+    .s03 .table-fill {
+      flex: 1.2;
+      min-height: 0;
+      display: flex;
+    }
+    .s03 .table-fill table {
+      flex: 1;
+      height: auto;
+      align-self: stretch;
+    }
+    .s03 .table-fill th,
+    .s03 .table-fill td { padding: 10px 16px; font-size: 23px; line-height: 1.28; }
+    .s03 .table-fill th { font-size: 17px; }
+
+    .s03 .formula {
+      font-size: 36px;
+      text-align: center;
+    }
+    .s03 .assign-split {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+    }
+    .s03 .assign-split .card,
+    .s03 .assign-split .side-panel { min-height: 0; }
+    .s03 .head-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .s03 .head-row.compact h2 { font-size: 42px; }
+    .s03 .head-row.compact .kicker { margin-bottom: 4px; }
+  </style>
 </head>
-<body class="deck-body" data-deck-title="Session 03 — Digital Marketing">
+<body class="deck-body s03" data-deck-title="Session 03 — Digital Marketing">
   <div class="viewport">
     <div class="stage" role="main">
 
       <section class="slide slide-title ink is-active" id="slide-1">
         <div class="slide-inner">
-          <p class="kicker">Session 03 · Digital Business</p>
-          <h1>Digital Marketing<br>Fundamentals</h1>
-          <p class="lede">How a brand finds customers — and how the spend shows up in the books.</p>
-          <div class="chips">
-            <span class="chip amber">Pemasaran digital</span>
-            <span class="chip">2 hours</span>
-            <span class="chip">Accounting track</span>
+          <div class="title-copy">
+            <p class="kicker">Session 03 · Digital Business</p>
+            <h1>Digital Marketing<br>Fundamentals</h1>
+            <p class="lede">How a brand finds customers — and how the spend shows up in the books.</p>
+            <div class="chips">
+              <span class="chip amber">Pemasaran digital</span>
+              <span class="chip">2 hours</span>
+              <span class="chip">Accounting track</span>
+            </div>
+            <p class="meta">Randy Brilliant · English lecture · Indonesian key terms on the chips</p>
           </div>
-          <p class="meta">Randy Brilliant · English lecture · Indonesian key terms on the chips</p>
+          <div class="title-art" aria-hidden="true">
+            <div class="ghost">03</div>
+            <div class="title-funnel" role="img" aria-label="Marketing funnel, Awareness wide at the top">
+              <div class="funnel-band w1">Awareness</div>
+              <div class="funnel-band w2">Consideration</div>
+              <div class="funnel-band w3">Purchase</div>
+              <div class="funnel-band w4">Retention</div>
+              <div class="funnel-band w5">Advocacy</div>
+            </div>
+          </div>
         </div>
-        <aside class="notes">Welcome, phones on silent. Today is the session the course hub promised: SEO, SEM, content, and the funnel — rebuilt so it actually fills two hours. Running example is Kopi Nusantara, a fictional Medan café. Ask who has bought something because of Instagram this week.</aside>
+        <aside class="notes">Welcome, phones on silent. Today is the session the course hub promised: SEO, SEM, content, and the funnel — rebuilt so it actually fills two hours. Running example is Kopi Nusantara, a fictional Medan café. Ask who has bought something because of Instagram this week. Point at the funnel on the right: Awareness is the wide top.</aside>
       </section>
 
       <section class="slide" id="slide-2">
         <div class="slide-inner">
-          <p class="kicker">Agenda</p>
-          <h2>What we will do in two hours</h2>
+          <div class="head-row">
+            <div>
+              <p class="kicker">Agenda</p>
+              <h2>What we will do in two hours</h2>
+            </div>
+            <span class="timer-hint">Six beats · studio at the end</span>
+          </div>
           <div class="agenda">
             <div class="agenda-item"><span class="n">01</span><div><h3>What digital marketing is</h3><p>Definition, ecosystem, why it is not “posting on Instagram.”</p></div></div>
             <div class="agenda-item"><span class="n">02</span><div><h3>Traditional vs digital</h3><p>Reach, cost, measurement — and when a banner still wins.</p></div></div>
@@ -80,22 +243,33 @@
 
       <section class="slide" id="slide-5">
         <div class="slide-inner">
-          <p class="kicker">Comparison</p>
-          <h2>Traditional vs digital</h2>
-          <table class="data">
-            <thead>
-              <tr><th></th><th>Traditional</th><th>Digital</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Reach</td><td>Local / regional</td><td>Anyone online — or a 3 km radius</td></tr>
-              <tr><td>Cost</td><td>High fixed (print, radio, outdoor)</td><td>Flexible — start from tens of thousands of rupiah</td></tr>
-              <tr><td>Measurement</td><td>Estimated, delayed</td><td>Near real-time; still needs judgement</td></tr>
-              <tr><td>Targeting</td><td>Broad demographics</td><td>Interest, location, past visitors</td></tr>
-              <tr><td>Conversation</td><td>One-way broadcast</td><td>Comments, DMs, reviews</td></tr>
-              <tr><td>Speed</td><td>Weeks to produce</td><td>Live the same afternoon</td></tr>
-            </tbody>
-          </table>
-          <div class="callout amber">Digital does not replace traditional. A radio spot still works for a Medan audience that commutes. The best mix is the one your customer actually sees — and that you can afford.</div>
+          <div class="head-row compact">
+            <div>
+              <p class="kicker">Comparison</p>
+              <h2>Traditional vs digital</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="table-fill">
+              <table class="data">
+                <thead>
+                  <tr><th></th><th>Traditional</th><th>Digital</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Reach</td><td>Local / regional</td><td>Anyone online — or a 3 km radius</td></tr>
+                  <tr><td>Cost</td><td>High fixed (print, radio, outdoor)</td><td>Flexible — start from tens of thousands of rupiah</td></tr>
+                  <tr><td>Measurement</td><td>Estimated, delayed</td><td>Near real-time; still needs judgement</td></tr>
+                  <tr><td>Targeting</td><td>Broad demographics</td><td>Interest, location, past visitors</td></tr>
+                  <tr><td>Conversation</td><td>One-way broadcast</td><td>Comments, DMs, reviews</td></tr>
+                  <tr><td>Speed</td><td>Weeks to produce</td><td>Live the same afternoon</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="side-panel amber">
+              <h3>They complement</h3>
+              <p>Digital does not replace traditional. A Medan radio spot still works for commuters. Use the mix your customer actually sees — and that you can afford.</p>
+            </div>
+          </div>
         </div>
         <aside class="notes">Old deck used a fake street address as the traditional example; we dropped it. Use ‘radio in Medan morning drive’ vs ‘Instagram geo-ads’. Ask: which is easier to audit? Digital leaves a trail — if someone exports it.</aside>
       </section>
@@ -105,7 +279,7 @@
           <p class="kicker">Customer journey</p>
           <h2>The marketing funnel</h2>
           <div class="row">
-            <div class="col" style="flex: 0.9">
+            <div class="col" style="flex: 0.95">
               <div class="funnel" role="img" aria-label="Marketing funnel with Awareness as the wide top, narrowing to Advocacy">
                 <div class="funnel-band w1">Awareness</div>
                 <div class="funnel-band w2">Consideration</div>
@@ -165,11 +339,10 @@
                 </ul>
               </div>
             </div>
-            <div class="col">
-              <div class="card">
-                <p class="label">Accountant watch</p>
-                <p>Awareness spend is usually <strong>period expense</strong>. A prepaid Ads credit is an asset until it is served. A blogger invoice needs a name, NPWP if required, and a clear deliverable — otherwise it is a fuzzy entertainment cost.</p>
-              </div>
+            <div class="side-panel">
+              <p class="label" style="letter-spacing:0.12em;text-transform:uppercase;font-weight:700;font-size:16px;color:var(--teal-deep)">Accountant watch</p>
+              <h3>Period expense, not a vibe</h3>
+              <p>Awareness spend is usually <strong>period expense</strong>. A prepaid Ads credit is an asset until it is served. A blogger invoice needs a name, NPWP if required, and a clear deliverable — otherwise it is a fuzzy entertainment cost.</p>
               <div class="chips">
                 <span class="chip">impresi</span>
                 <span class="chip amber">faktur / invoice</span>
@@ -244,11 +417,10 @@
               </div>
               <div class="callout amber">Acquisition is usually more expensive than retention — often cited in a wide band of about 5–25× depending on the industry. Do not treat “5×” as a law. Compute <em>your</em> CAC vs the cost of a stamp-card freebie.</div>
             </div>
-            <div class="col">
-              <div class="card">
-                <p class="label">Loyalty on the ledger</p>
-                <p>Unredeemed stamps are a small deferred obligation if material. For a café, they are often immaterial — but the habit of tracking redemptions is the point. A free drink is COGS, not “brand love.”</p>
-              </div>
+            <div class="side-panel">
+              <p class="label" style="letter-spacing:0.12em;text-transform:uppercase;font-weight:700;font-size:16px;color:var(--teal-deep)">Loyalty on the ledger</p>
+              <h3>A free drink is COGS</h3>
+              <p>Unredeemed stamps are a small deferred obligation if material. For a café, they are often immaterial — but the habit of tracking redemptions is the point. A free drink is COGS, not “brand love.”</p>
               <div class="chips">
                 <span class="chip">program loyalitas</span>
                 <span class="chip amber">kewajiban tangguhan</span>
@@ -360,11 +532,10 @@
               </div>
               <div class="callout">The 80 / 20 habit: most posts help or entertain. A minority sell. A feed that is only discount codes trains people to wait.</div>
             </div>
-            <div class="col">
-              <div class="card">
-                <p class="label">On the books</p>
-                <p>A freelancer invoice for a video is marketing expense. Staff time is payroll, not “free content.” If you reuse a video for six months, it is still usually expensed — resist capitalising a Reel.</p>
-              </div>
+            <div class="side-panel">
+              <p class="label" style="letter-spacing:0.12em;text-transform:uppercase;font-weight:700;font-size:16px;color:var(--teal-deep)">On the books</p>
+              <h3>Staff time is not free</h3>
+              <p>A freelancer invoice for a video is marketing expense. Staff time is payroll, not “free content.” If you reuse a video for six months, it is still usually expensed — resist capitalising a Reel.</p>
               <div class="chips">
                 <span class="chip">konten edukasi</span>
                 <span class="chip amber">jasa freelancer</span>
@@ -381,10 +552,10 @@
           <p class="kicker">The rest of the mix</p>
           <h2>Instagram, WhatsApp, email, influencers</h2>
           <div class="grid grid-2">
-            <div class="card"><p class="label">Instagram</p><p>Best for awareness and the look of the room. Shopping tags help; they do not replace a WhatsApp close. Treat boosts as SEM with prettier pictures.</p></div>
-            <div class="card"><p class="label">WhatsApp Business</p><p>Catalogue, labels, quick replies. This is operations plus retention. Broadcast lists without consent burn trust — and can violate platform rules.</p></div>
-            <div class="card"><p class="label">Email</p><p>Owned channel. A weekly note beats a daily blast. Track unsubscribe as a health metric, not a nuisance.</p></div>
-            <div class="card"><p class="label">Influencers</p><p>Buy an audience you cannot reach yet. Contract the deliverable, usage rights, and disclosure. Pay against invoice, not to a personal e-wallet with no name.</p></div>
+            <div class="card"><p class="label">Instagram</p><h3>Show the room</h3><p>Best for awareness and the look of the room. Shopping tags help; they do not replace a WhatsApp close. Treat boosts as SEM with prettier pictures.</p></div>
+            <div class="card"><p class="label">WhatsApp Business</p><h3>Close and keep</h3><p>Catalogue, labels, quick replies. This is operations plus retention. Broadcast lists without consent burn trust — and can violate platform rules.</p></div>
+            <div class="card"><p class="label">Email</p><h3>Owned channel</h3><p>A weekly note beats a daily blast. Track unsubscribe as a health metric, not a nuisance.</p></div>
+            <div class="card"><p class="label">Influencers</p><h3>Borrowed trust</h3><p>Buy an audience you cannot reach yet. Contract the deliverable, usage rights, and disclosure. Pay against invoice, not to a personal e-wallet with no name.</p></div>
           </div>
         </div>
         <aside class="notes">Influencer payment hygiene is the accounting gold. ‘Transfer to my GoPay’ with no invoice is how files fail an audit. One minute, then metrics.</aside>
@@ -394,19 +565,26 @@
         <div class="slide-inner">
           <p class="kicker">Metrics an accountant reads</p>
           <h2>Five numbers that earn a seat</h2>
-          <table class="data">
-            <thead>
-              <tr><th>Metric</th><th>Formula</th><th>Why it matters</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>CAC</strong></td><td>Sales + marketing cost ÷ new customers</td><td>What you paid to buy a first visit</td></tr>
-              <tr><td><strong>CLV</strong></td><td>AOV × purchases per year × years × margin</td><td>Whether that CAC was sane</td></tr>
-              <tr><td><strong>ROAS</strong></td><td>Attributed revenue ÷ ad spend</td><td>Campaign-level efficiency</td></tr>
-              <tr><td><strong>Conversion rate</strong></td><td>Buyers ÷ visitors (or clicks)</td><td>Where the funnel leaks</td></tr>
-              <tr><td><strong>Spend / revenue</strong></td><td>Marketing cost ÷ sales</td><td>Budget test vs last month</td></tr>
-            </tbody>
-          </table>
-          <p class="source">Rule of thumb, not a law: many digital businesses aim for CLV well above CAC (often talked about as ~3×). Compute it on contribution margin, not on gross sales.</p>
+          <div class="row">
+            <div class="table-fill">
+              <table class="data">
+                <thead>
+                  <tr><th>Metric</th><th>Formula</th><th>Why it matters</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>CAC</strong></td><td>Sales + marketing cost ÷ new customers</td><td>What you paid to buy a first visit</td></tr>
+                  <tr><td><strong>CLV</strong></td><td>AOV × frequency × years × margin</td><td>Whether that CAC was sane</td></tr>
+                  <tr><td><strong>ROAS</strong></td><td>Attributed revenue ÷ ad spend</td><td>Campaign-level efficiency</td></tr>
+                  <tr><td><strong>Conversion rate</strong></td><td>Buyers ÷ visitors (or clicks)</td><td>Where the funnel leaks</td></tr>
+                  <tr><td><strong>Spend / revenue</strong></td><td>Marketing cost ÷ sales</td><td>Budget test vs last month</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="side-panel">
+              <h3>Use margin, not sales</h3>
+              <p>Rule of thumb, not a law: many digital businesses aim for CLV well above CAC (often talked about as ~3×). Compute it on contribution margin, not on gross sales.</p>
+            </div>
+          </div>
         </div>
         <aside class="notes">Walk CAC and CLV slowly. The 3× CLV:CAC ratio is a common practitioner heuristic, not an IFRS rule. Stress contribution margin. ROAS ignores COGS — that is why the next two slides exist.</aside>
       </section>
@@ -415,19 +593,26 @@
         <div class="slide-inner">
           <p class="kicker">How the spend hits the books</p>
           <h2>Ads, fees, and prepaid credit</h2>
-          <table class="data">
-            <thead>
-              <tr><th>Event</th><th>Debit</th><th>Credit</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Top up Google Ads / Meta</td><td>Prepaid advertising</td><td>Cash / bank</td></tr>
-              <tr><td>Ads are served this month</td><td>Marketing expense</td><td>Prepaid advertising</td></tr>
-              <tr><td>Influencer invoice paid</td><td>Marketing expense</td><td>Cash (or AP)</td></tr>
-              <tr><td>Marketplace commission withheld</td><td>Selling / platform fee</td><td>Marketplace receivable</td></tr>
-              <tr><td>Settlement arrives net</td><td>Bank</td><td>Marketplace receivable</td></tr>
-            </tbody>
-          </table>
-          <div class="callout">Marketplace “sales” on the dashboard are not always revenue. Fees are often deducted before you are paid. Reconcile <em>gross order, fee, net cash</em> — or your revenue is understated and your fees disappear.</div>
+          <div class="row">
+            <div class="table-fill">
+              <table class="data">
+                <thead>
+                  <tr><th>Event</th><th>Debit</th><th>Credit</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Top up Google Ads / Meta</td><td>Prepaid advertising</td><td>Cash / bank</td></tr>
+                  <tr><td>Ads are served this month</td><td>Marketing expense</td><td>Prepaid advertising</td></tr>
+                  <tr><td>Influencer invoice paid</td><td>Marketing expense</td><td>Cash (or AP)</td></tr>
+                  <tr><td>Marketplace commission withheld</td><td>Selling / platform fee</td><td>Marketplace receivable</td></tr>
+                  <tr><td>Settlement arrives net</td><td>Bank</td><td>Marketplace receivable</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="side-panel">
+              <h3>Reconcile three numbers</h3>
+              <p>Marketplace “sales” on the dashboard are not always revenue. Fees are often deducted before you are paid. Reconcile <em>gross order, fee, net cash</em> — or your revenue is understated and your fees disappear.</p>
+            </div>
+          </div>
         </div>
         <aside class="notes">This is the slide accounting students came for. Walk debit/credit left to right. Tease PSAK 72 gross vs net for agents — full treatment is Session 02/08. Commission rates change by category; do not quote a single ‘2–5%’ as fact.</aside>
       </section>
@@ -436,40 +621,41 @@
         <div class="slide-inner">
           <p class="kicker">Worked example · teaching figures</p>
           <h2>Did the ads work?</h2>
-          <table class="data">
-            <thead>
-              <tr><th>Kopi Nusantara · one month</th><th class="num">Amount</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Drink &amp; food sales</td><td class="num">Rp 48,000,000</td></tr>
-              <tr><td>Variable COGS (38%)</td><td class="num">(18,240,000)</td></tr>
-              <tr><td>Ad spend (IG + Google)</td><td class="num">(1,800,000)</td></tr>
-              <tr><td>Influencer invoice</td><td class="num">(600,000)</td></tr>
-              <tr><td>New customers from campaigns</td><td class="num">80 people</td></tr>
-              <tr><td>Revenue tagged to those campaigns</td><td class="num">Rp 6,200,000</td></tr>
-            </tbody>
-          </table>
-          <div class="grid grid-3">
-            <div class="stat"><div class="num">Rp 30k</div><p class="cap">CAC = 2.4jt ÷ 80</p></div>
-            <div class="stat"><div class="num">2.6×</div><p class="cap">ROAS = 6.2jt ÷ 2.4jt</p></div>
-            <div class="stat"><div class="num">Rp 1.44jt</div><p class="cap">Campaign contribution after COGS &amp; ads</p></div>
+          <div class="row">
+            <div class="table-fill">
+              <table class="data">
+                <thead>
+                  <tr><th>Kopi Nusantara · one month</th><th class="num">Amount</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Drink &amp; food sales</td><td class="num">Rp 48,000,000</td></tr>
+                  <tr><td>Variable COGS (38%)</td><td class="num">(18,240,000)</td></tr>
+                  <tr><td>Ad spend (IG + Google)</td><td class="num">(1,800,000)</td></tr>
+                  <tr><td>Influencer invoice</td><td class="num">(600,000)</td></tr>
+                  <tr><td>New customers from campaigns</td><td class="num">80 people</td></tr>
+                  <tr><td>Revenue tagged to those campaigns</td><td class="num">Rp 6,200,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col" style="flex: 0.85">
+              <div class="stat"><div class="num">Rp 30k</div><p class="cap">CAC = 2.4jt ÷ 80</p></div>
+              <div class="stat"><div class="num">2.6×</div><p class="cap">ROAS = 6.2jt ÷ 2.4jt</p></div>
+              <div class="stat"><div class="num">Rp 1.44jt</div><p class="cap">Campaign contribution after COGS &amp; ads</p></div>
+            </div>
           </div>
         </div>
-        <aside class="notes">Do the arithmetic on the board if the room is awake: 2.4m/80 = 30k CAC. ROAS 6.2/2.4 ≈ 2.58. Contribution: 6.2m × 62% margin = 3.844m − 2.4m ads = 1.444m… wait I used 38% COGS so margin is 62%. 6.2 * 0.62 = 3.844; minus 2.4 = 1.444. I wrote 1.16jt on the slide. LET ME FIX THIS.
-
-6,200,000 * 0.62 = 3,844,000
-3,844,000 - 2,400,000 = 1,444,000
-
-I should put Rp 1.44jt on the slide. I'll fix after writing.
-
-Walk the arithmetic: 2.4m / 80 = Rp 30k CAC. ROAS = 6.2 / 2.4 ≈ 2.6×. Campaign contribution = 6.2m × 62% margin − 2.4m ads ≈ Rp 1.44m. If those 80 guests return four times in a year at Rp 28k and 62% margin, CLV is about Rp 69k versus CAC Rp 30k — healthy on paper. Attribution is messy; last-click lies. Teaching figures only.
+        <aside class="notes">Walk the arithmetic: 2.4m / 80 = Rp 30k CAC. ROAS = 6.2 / 2.4 ≈ 2.6×. Campaign contribution = 6.2m × 62% margin − 2.4m ads ≈ Rp 1.44m. If those 80 guests return four times in a year at Rp 28k and 62% margin, CLV is about Rp 69k versus CAC Rp 30k — healthy on paper. Attribution is messy; last-click lies. Teaching figures only.</aside>
       </section>
 
       <section class="slide" id="slide-21">
         <div class="slide-inner">
-          <p class="kicker">Studio</p>
-          <h2>Plan a funnel + budget</h2>
-          <p><span class="timer-hint">18 minutes · groups of 3–4</span></p>
+          <div class="head-row">
+            <div>
+              <p class="kicker">Studio</p>
+              <h2>Plan a funnel + budget</h2>
+            </div>
+            <span class="timer-hint">18 minutes · groups of 3–4</span>
+          </div>
           <div class="grid grid-2">
             <div class="card">
               <p class="label">Your brief</p>
@@ -512,16 +698,22 @@ Walk the arithmetic: 2.4m / 80 = Rp 30k CAC. ROAS = 6.2 / 2.4 ≈ 2.6×. Campaig
         <div class="slide-inner">
           <p class="kicker">Take home · due next session</p>
           <h2>Assignment</h2>
-          <div class="card">
-            <p>Pick one UMKM you can observe (family shop, a place you eat, or Kopi Nusantara if you need a clean case). Write <strong>two pages</strong>:</p>
-            <ul class="list">
-              <li>Map their current funnel with real touchpoints you can see</li>
-              <li>Propose a 30-day, Rp 2jt channel mix</li>
-              <li>Compute implied CAC and the ROAS they need to break even on contribution margin</li>
-              <li>Draft the journal entries for ad top-up, ads served, and one influencer or boost invoice</li>
-            </ul>
+          <div class="assign-split">
+            <div class="card">
+              <p>Pick one UMKM you can observe (family shop, a place you eat, or Kopi Nusantara if you need a clean case). Write <strong>two pages</strong>:</p>
+              <ul class="list">
+                <li>Map their current funnel with real touchpoints you can see</li>
+                <li>Propose a 30-day, Rp 2jt channel mix</li>
+                <li>Compute implied CAC and the ROAS they need to break even on contribution margin</li>
+                <li>Draft the journal entries for ad top-up, ads served, and one influencer or boost invoice</li>
+              </ul>
+            </div>
+            <div class="side-panel amber">
+              <h3>Next — Session 04</h3>
+              <p><strong>Social Media for Business</strong>: content systems, paid social, and how influencer invoices and barter belong in the file.</p>
+              <p>Bring this assignment. We will steal the best funnel maps.</p>
+            </div>
           </div>
-          <div class="callout amber">Next session — <strong>04 Social Media for Business</strong>: content systems, paid social, and how influencer invoices and barter belong in the file. Bring this assignment; we will steal the best funnel maps.</div>
         </div>
         <aside class="notes">Repeat the due date out loud. Two pages, not a startup deck. Journals are required — this is an accounting class. Dismiss. No wraparound; stay on this slide if they keep asking questions.</aside>
       </section>
