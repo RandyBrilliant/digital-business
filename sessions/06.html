@@ -10,260 +10,196 @@
 <body class="deck-body" data-deck-title="Session 06 — Payments">
   <div class="viewport">
     <div class="stage" role="main">
-
       <section class="slide slide-title ink is-active" id="slide-1">
         <div class="slide-inner">
-          <p class="kicker">Session 06 · Digital Business</p>
-          <h1>Digital Payment<br>Systems</h1>
-          <p class="lede">How money moves — and how an accountant gets from a QR beep to a clean sales journal.</p>
-          <div class="chips">
-            <span class="chip amber">QRIS</span>
-            <span class="chip">MDR</span>
-            <span class="chip navy">rekonsiliasi</span>
+          <p class="kicker">Session 06</p>
+          <h1>Digital<br>Payments</h1>
+          <div class="grid g5" style="flex:0 0 auto">
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand qris lg"><img src="../assets/brands/qris.svg" alt="QRIS"></div><strong>QRIS</strong></div>
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand gopay lg"><img src="../assets/brands/gopay.svg" alt="GoPay"></div><strong>GoPay</strong></div>
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand ovo lg"><img src="../assets/brands/ovo.svg" alt="OVO"></div><strong>OVO</strong></div>
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand dana lg"><img src="../assets/brands/dana.svg" alt="DANA"></div><strong>DANA</strong></div>
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand xendit lg"><img src="../assets/brands/xendit.svg" alt="Xendit"></div><strong>Xendit</strong></div>
           </div>
-          <p class="meta">Randy Brilliant · Rails, fees, settlement, control</p>
         </div>
         <aside class="notes">Bring a printed QRIS if you have one. Today we kill two myths: ‘QRIS is free’ and ‘QRIS is legally mandatory for every warung’.</aside>
       </section>
 
       <section class="slide" id="slide-2">
         <div class="slide-inner">
-          <p class="kicker">Agenda</p>
-          <h2>Follow the cash</h2>
-          <div class="agenda">
-            <div class="agenda-item"><span class="n">01</span><div><h3>The rails</h3><p>E-wallets, QRIS, VA, cards, BNPL, COD.</p></div></div>
-            <div class="agenda-item"><span class="n">02</span><div><h3>What QRIS is</h3><p>National QR standard — who must use it, who need not.</p></div></div>
-            <div class="agenda-item"><span class="n">03</span><div><h3>MDR</h3><p>Published Bank Indonesia bands, plus the 2026 0% expansion.</p></div></div>
-            <div class="agenda-item"><span class="n">04</span><div><h3>Gateways</h3><p>Midtrans, Xendit, and friends — jobs, not rate cards.</p></div></div>
-            <div class="agenda-item"><span class="n">05</span><div><h3>Reconcile</h3><p>Gross sale, fee, net settle, timing.</p></div></div>
-            <div class="agenda-item"><span class="n">06</span><div><h3>Studio</h3><p><span class="timer-hint">15 min</span> Rebuild Warung Sari’s week of QRIS.</p></div></div>
+          <h2>Today</h2>
+          <div class="grid g3 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/credit-card.svg" alt=""></span><strong>The rails</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/qr-code.svg" alt=""></span><strong>What QRIS is</strong></div>
+            <div class="ico-tile"><span class="glyph amber"><img class="ico-img" src="../assets/icons/badge-percent.svg" alt=""></span><strong>MDR</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/globe.svg" alt=""></span><strong>Gateways</strong></div>
+            <div class="ico-tile"><span class="glyph green"><img class="ico-img" src="../assets/icons/repeat.svg" alt=""></span><strong>Reconcile</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/users.svg" alt=""></span><strong>Studio</strong></div>
           </div>
         </div>
-        <aside class="notes">COD is still real in e-commerce. Do not declare Indonesia cashless as a finished fact.</aside>
+        <aside class="notes">COD is still real in e-commerce. Do not declare Indonesia cashless as a finished fact. Studio 15 min: rebuild Warung Sari’s week of QRIS.</aside>
       </section>
 
       <section class="slide" id="slide-3">
         <div class="slide-inner">
-          <p class="kicker">Landscape</p>
-          <h2>How Indonesians pay</h2>
-          <div class="grid grid-3">
-            <div class="card"><p class="label">E-wallets</p><p>GoPay, OVO, Dana, ShopeePay — often the customer’s first tap. The merchant may see them as QRIS.</p></div>
-            <div class="card"><p class="label">QRIS</p><p>One merchant QR, many apps. The interoperability story of the last few years.</p></div>
-            <div class="card"><p class="label">Virtual account</p><p>Bank transfer with a unique code. Common for invoices and checkout.</p></div>
-            <div class="card"><p class="label">Cards</p><p>Visa / Mastercard / JCB / local. Growing, still not the default at a warung.</p></div>
-            <div class="card"><p class="label">BNPL</p><p>Kredivo, Akulaku, SPayLater and peers. The merchant may be paid sooner than the customer pays.</p></div>
-            <div class="card"><p class="label">COD</p><p>Cash on delivery. Still used in e-commerce. High operational and fraud cost.</p></div>
+          <h2>How people pay</h2>
+          <div class="grid g3 rows-fill">
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:12px"><div class="logo-row"><div class="brand gopay"><img src="../assets/brands/gopay.svg" alt="GoPay"></div><div class="brand ovo"><img src="../assets/brands/ovo.svg" alt="OVO"></div><div class="brand dana"><img src="../assets/brands/dana.svg" alt="DANA"></div></div><strong>Wallets</strong></div>
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand qris lg"><img src="../assets/brands/qris.svg" alt="QRIS"></div><strong>QRIS</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/landmark.svg" alt=""></span><strong>Virtual account</strong></div>
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand go lg"><img src="../assets/brands/visa.svg" alt="Visa"></div><strong>Cards</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/clock.svg" alt=""></span><strong>BNPL</strong></div>
+            <div class="ico-tile"><span class="glyph amber"><img class="ico-img" src="../assets/icons/banknote.svg" alt=""></span><strong>COD</strong></div>
           </div>
         </div>
-        <aside class="notes">Dropped the old ‘70% of digital / 30% BNPL / 20–30% COD’ cluster — unverified mix for 2026. Qualitative only.</aside>
+        <aside class="notes">Qualitative only — dropped unverified 70/30 mix. Merchant may see wallets as QRIS. BNPL: merchant may be paid sooner than the customer pays. COD: high operational and fraud cost.</aside>
       </section>
 
       <section class="slide" id="slide-4">
         <div class="slide-inner">
-          <p class="kicker">QRIS · the rule</p>
-          <h2>Standard for QR — not a duty for every stall</h2>
-          <div class="grid grid-2">
-            <div class="card">
-              <p class="label">What is true</p>
-              <ul class="list">
-                <li>QRIS is Bank Indonesia’s national QR standard</li>
-                <li>Payment service providers that offer QR payments must use QRIS</li>
-                <li>A merchant registers with one licensed PSP and can accept many apps</li>
-              </ul>
-            </div>
-            <div class="card">
-              <p class="label">What is overstated</p>
-              <ul class="list">
-                <li>“QRIS is mandatory for all merchants” — no: a cash-only warung is not breaking a QR law by staying cash</li>
-                <li>“QRIS is always free” — MDR exists; some bands are 0%</li>
-              </ul>
-            </div>
+          <h2>QRIS</h2>
+          <div class="compare">
+            <div class="side"><p class="label">True</p><h3>National QR standard</h3><p>PSPs that offer QR must use it</p></div>
+            <div class="vs">≠</div>
+            <div class="side"><p class="label">Overstated</p><h3>Mandatory for every stall</h3><p>Cash-only is still legal</p></div>
           </div>
-          <p class="source">Bank Indonesia QRIS pages: PSPs offering QR must use the standard. Merchant adoption is policy-supported, not a universal merchant mandate.</p>
         </div>
-        <aside class="notes">Read the left column twice. This is the correction the brief demanded.</aside>
+        <aside class="notes">Read the left twice. Bank Indonesia QRIS pages: PSPs offering QR must use the standard. Merchant adoption is policy-supported, not a universal merchant mandate. QRIS is not always free — MDR exists; some bands are 0%.</aside>
       </section>
 
       <section class="slide" id="slide-5">
         <div class="slide-inner">
-          <p class="kicker">QRIS · scale</p>
-          <h2>It is now ordinary infrastructure</h2>
-          <div class="grid grid-3">
-            <div class="stat"><div class="num">65.8jt</div><p class="cap">QRIS users as of June 2026</p></div>
-            <div class="stat"><div class="num">44.9jt</div><p class="cap">Merchants accepting QRIS</p></div>
-            <div class="stat"><div class="num">96.7%</div><p class="cap">Of those merchants are UMKM</p></div>
+          <h2>June 2026</h2>
+          <div class="grid g3 rows-fill">
+            <div class="metric"><div class="num">65.8jt</div><p class="cap">Users</p></div>
+            <div class="metric"><div class="num">44.9jt</div><p class="cap">Merchants</p></div>
+            <div class="metric"><div class="num">96.7%</div><p class="cap">of them UMKM</p></div>
           </div>
-          <p class="source">Bank Indonesia news release on Indonesia Credit Card and 0% MDR policy (2026): users 65.77 million, merchants 44.86 million, 96.68% UMKM, H1 2026 transaction count 12.55 billion, nominal Rp 1.12 quadrillion.</p>
         </div>
-        <aside class="notes">Use the source line. These are BI’s figures, dated mid-2026. H1 volume is optional colour if someone asks.</aside>
+        <aside class="notes">Bank Indonesia news release on Indonesia Credit Card and 0% MDR policy (2026): users 65.77 million, merchants 44.86 million, 96.68% UMKM, H1 2026 transaction count 12.55 billion, nominal Rp 1.12 quadrillion. Date the slide when you speak.</aside>
       </section>
 
       <section class="slide" id="slide-6">
         <div class="slide-inner">
-          <p class="kicker">MDR</p>
-          <h2>The fee that hides in ‘net cash’</h2>
-          <table class="data">
-            <thead>
-              <tr><th>Merchant</th><th>Transaction</th><th>MDR</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Micro (UMI)</td><td>≤ Rp 500,000</td><td>0%</td></tr>
-              <tr><td>Micro (UMI)</td><td>&gt; Rp 500,000</td><td>0.3%</td></tr>
-              <tr><td>Small / medium / large</td><td>Standard</td><td>0.7%</td></tr>
-              <tr><td>Special categories (e.g. social, some G2P)</td><td>As listed by BI</td><td>Often 0%</td></tr>
-            </tbody>
-          </table>
-          <div class="callout amber">From 1 Oct 2026 BI expands 0% MDR: still 0% for micro ≤ Rp 500k, and 0% for other merchants on transactions up to Rp 100k (replacing 0.7% on those small tickets). Always re-read the live BI table before you advise.</div>
-          <p class="source">Bank Indonesia QRIS MDR table; 0% expansion announced in BI release on Indonesia Credit Card / MDR (effective 1 Oct 2026).</p>
+          <h2>MDR</h2>
+          <div class="grid g3 rows-fill">
+            <div class="metric"><div class="num">0%</div><p class="cap">UMI ≤ 500k</p></div>
+            <div class="metric"><div class="num">0.3%</div><p class="cap">UMI above</p></div>
+            <div class="metric"><div class="num">0.7%</div><p class="cap">SME / large</p></div>
+          </div>
         </div>
-        <aside class="notes">Class date is 28 Sep 2026 — the expansion is days away. Say ‘from 1 October’. Acquirers may add other fees; MDR is not always the only haircut.</aside>
+        <aside class="notes">From 1 Oct 2026 BI expands 0% MDR: still 0% for micro ≤ Rp 500k, and 0% for other merchants on transactions up to Rp 100k (replacing 0.7% on those small tickets). Class is 28 Sep 2026 — say ‘from 1 October’. Acquirers may add other fees. Always re-read the live BI table.</aside>
       </section>
 
       <section class="slide" id="slide-7">
         <div class="slide-inner">
-          <p class="kicker">Gateways</p>
-          <h2>If you sell on your own site</h2>
-          <div class="grid grid-3">
-            <div class="card"><p class="label">Midtrans</p><p>Cards, VA, e-wallets, QRIS, BNPL. Common on SME stacks. Part of the GoTo world historically.</p></div>
-            <div class="card"><p class="label">Xendit</p><p>Similar rails plus invoicing. Popular with startups and marketplaces.</p></div>
-            <div class="card"><p class="label">Others</p><p>Duitku, DOKU, and bank-native QRIS. Moota-style tools watch incoming transfers.</p></div>
+          <h2>Gateways</h2>
+          <div class="grid g3 rows-fill">
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand mid lg"><img src="../assets/brands/midtrans.svg" alt="Midtrans"></div><strong>Midtrans</strong></div>
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand xendit lg"><img src="../assets/brands/xendit.svg" alt="Xendit"></div><strong>Xendit</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/landmark.svg" alt=""></span><strong>Bank QRIS</strong><span>DOKU · Duitku</span></div>
           </div>
-          <div class="callout">We will not memorise “2–3%” as a forever rate. Open the current commercial schedule. Your job is the settlement file and the fee account.</div>
         </div>
-        <aside class="notes">Old deck listed precise % by brand. Those go stale. Job description only.</aside>
+        <aside class="notes">Job description only — do not memorise 2–3% as a forever rate. Your job is the settlement file and the fee account. Midtrans historically GoTo-adjacent. Xendit popular with startups.</aside>
       </section>
 
       <section class="slide" id="slide-8">
         <div class="slide-inner">
-          <p class="kicker">Worked example</p>
-          <h2>Warung Sari, one Tuesday</h2>
-          <table class="data">
-            <thead>
-              <tr><th>Ticket</th><th>Rail</th><th class="num">Gross</th><th>Fee idea</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Nasi + teh</td><td>Cash</td><td class="num">18,000</td><td>None</td></tr>
-              <tr><td>Sembako basket</td><td>QRIS (micro, 85k)</td><td class="num">85,000</td><td>0% MDR band</td></tr>
-              <tr><td>Parcel via Shopee</td><td>Platform settle</td><td class="num">120,000</td><td>Commission + ads, not MDR</td></tr>
-              <tr><td>Kartu</td><td>EDC / gateway</td><td class="num">40,000</td><td>Card MDR ≠ QRIS</td></tr>
-            </tbody>
-          </table>
-          <p class="lede">Four rails, four receivable or cash stories. One “sales” line without a split will not close.</p>
+          <h2>Warung Sari · Tuesday</h2>
+          <div class="grid g4 rows-fill">
+            <div class="metric"><div class="num">18k</div><p class="cap">Cash</p></div>
+            <div class="metric"><div class="num">85k</div><p class="cap">QRIS 0%</p></div>
+            <div class="metric"><div class="num">120k</div><p class="cap">Shopee</p></div>
+            <div class="metric"><div class="num">40k</div><p class="cap">Card</p></div>
+          </div>
         </div>
-        <aside class="notes">85k micro QRIS is 0% under current UMI ≤500k. The Shopee parcel is Session 02 logic. Card is a different fee.</aside>
+        <aside class="notes">Four rails, four receivable or cash stories. 85k micro QRIS is 0% under UMI ≤500k. The Shopee parcel is Session 02 logic. Card MDR ≠ QRIS. One ‘sales’ line without a split will not close.</aside>
       </section>
 
       <section class="slide" id="slide-9">
         <div class="slide-inner">
-          <p class="kicker">Journals</p>
-          <h2>Beep, then wait, then bank</h2>
-          <table class="data">
-            <thead>
-              <tr><th>When</th><th>Debit</th><th>Credit</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Sale on QRIS</td><td>QRIS receivable (gross)</td><td>Sales</td></tr>
-              <tr><td>MDR withheld</td><td>Payment fee expense</td><td>QRIS receivable</td></tr>
-              <tr><td>Settlement credit</td><td>Bank</td><td>QRIS receivable</td></tr>
-              <tr><td>Unsettled at month-end</td><td>Leave receivable; do not pretend it is cash</td><td></td></tr>
-            </tbody>
-          </table>
-          <div class="chips">
-            <span class="chip">piutang QRIS</span>
-            <span class="chip amber">beban MDR</span>
-            <span class="chip navy">T+1 / T+2</span>
+          <h2>Beep → bank</h2>
+          <div class="flow">
+            <div class="step"><strong>Sale</strong><span>Dr AR</span></div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>Fee</strong><span>Dr MDR</span></div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>Settle</strong><span>Dr Bank</span></div>
           </div>
         </div>
-        <aside class="notes">Some PSPs settle net. Then: Dr Bank, Dr Fee, Cr Sales — or Dr Receivable gross and clear it. Pick a method and keep it.</aside>
+        <aside class="notes">Beep is not bank. Timing gap is a receivable. Reconcile gross, fee, net. Preview Session 05 analytics: a dashboard that cannot tie to the GL is a poster.</aside>
       </section>
 
       <section class="slide" id="slide-10">
         <div class="slide-inner">
-          <p class="kicker">Controls</p>
-          <h2>Payment is where cash walks out</h2>
-          <div class="grid grid-3">
-            <div class="card"><p class="label">Payout account</p><p>QRIS and marketplace must settle to the <em>business</em> bank, not a cousin’s Dana.</p></div>
-            <div class="card"><p class="label">Daily match</p><p>POS tickets vs PSP report vs bank. Ten minutes. The leak is in the unmatched.</p></div>
-            <div class="card"><p class="label">Refunds</p><p>Who can void a QRIS sale? Dual control if you can; a log if you cannot.</p></div>
+          <h2>Timing</h2>
+          <div class="grid g2 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/zap.svg" alt=""></span><strong>Beep</strong><span>customer leaves</span></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/landmark.svg" alt=""></span><strong>Bank</strong><span>T+1 / T+2</span></div>
           </div>
         </div>
-        <aside class="notes">Same access sermon as Session 01, now with money movement.</aside>
+        <aside class="notes">If they recognise cash at beep, the books lie until settlement. Cut-off at month-end is the exam question.</aside>
       </section>
 
       <section class="slide" id="slide-11">
         <div class="slide-inner">
-          <p class="kicker">BNPL and COD</p>
-          <h2>When the customer is not the payer yet</h2>
-          <div class="grid grid-2">
-            <div class="card"><p class="label">BNPL</p><p>A licensed party often pays the merchant (minus a fee) and collects later. Your counterpart is the provider’s settlement, not the shopper’s salary date. Read the contract: principal vs agent again.</p></div>
-            <div class="card"><p class="label">COD</p><p>Revenue when delivered and accepted — and cash when the courier remits. Failed delivery and fake receipts are inventory and fraud problems.</p></div>
+          <h2>Control</h2>
+          <div class="grid g3 rows-fill">
+            <div class="ico-tile"><span class="glyph accent"><img class="ico-img" src="../assets/icons/smartphone.svg" alt=""></span><strong>OTP</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/file-text.svg" alt=""></span><strong>Settlement file</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/shield-check.svg" alt=""></span><strong>Daily match</strong></div>
           </div>
         </div>
-        <aside class="notes">Do not deep-dive product names. Risk picture only.</aside>
+        <aside class="notes">Same password problem as Session 01. Someone must match QRIS report + bank + sales journal. If the owner is that someone, it still has to happen.</aside>
       </section>
 
       <section class="slide" id="slide-12">
         <div class="slide-inner">
-          <p class="kicker">Studio</p>
-          <h2>Rebuild the week</h2>
-          <p><span class="timer-hint">15 minutes · pairs</span></p>
-          <div class="card">
-            <p>Warung Sari shows you: a POS roll, a QRIS settlement PDF, a Shopee release, and a bank statement. They do not match.</p>
-            <ul class="list">
-              <li>List three plausible breaks (timing, MDR, voucher, theft, unrecorded cash)</li>
-              <li>Draft the QRIS journal set for one day</li>
-              <li>Write the one control you would implement this week</li>
-            </ul>
+          <h2>Studio</h2>
+          <div class="grid g3 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/qr-code.svg" alt=""></span><strong>Week of QRIS</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/calculator.svg" alt=""></span><strong>Gross · fee · net</strong></div>
+            <div class="ico-tile"><span class="glyph accent"><img class="ico-img" src="../assets/icons/receipt.svg" alt=""></span><strong>3 journals</strong></div>
           </div>
         </div>
-        <aside class="notes">No need for real PDFs. Imagination plus the Tuesday table. Hear two breaks.</aside>
+        <aside class="notes">15 minutes. Rebuild Warung Sari’s week. Hear two groups. Ban ‘QRIS is free so ignore it’.</aside>
       </section>
 
       <section class="slide" id="slide-13">
         <div class="slide-inner">
-          <p class="kicker">Quick check</p>
-          <h2>Which sentence is accurate?</h2>
-          <div class="grid grid-2">
-            <div class="card"><p class="label">A</p><p>Every Indonesian merchant is legally required to accept QRIS.</p></div>
-            <div class="card"><p class="label">B</p><p>If a PSP offers QR payments, those QR codes must follow QRIS.</p></div>
-            <div class="card"><p class="label">C</p><p>MDR is always 0% for everyone after October 2026.</p></div>
-            <div class="card"><p class="label">D</p><p>Net settlement is the same number as sales revenue.</p></div>
-          </div>
-          <p class="source">Correct: B. C is false — 0% is banded. D is the whole problem of this class.</p>
-        </div>
-        <aside class="notes">Hands. B.</aside>
-      </section>
-
-      <section class="slide" id="slide-14">
-        <div class="slide-inner">
-          <p class="kicker">Recap</p>
-          <h2>Four things to keep</h2>
-          <div class="grid grid-2">
-            <div class="card"><p class="label">01</p><h3>Many rails</h3><p>Cash is not dead. QRIS is the QR standard.</p></div>
-            <div class="card"><p class="label">02</p><h3>MDR is a line</h3><p>Do not hide it inside sales.</p></div>
-            <div class="card"><p class="label">03</p><h3>Timing</h3><p>Beep ≠ bank. Receivable exists.</p></div>
-            <div class="card"><p class="label">04</p><h3>Payout account</h3><p>Business bank, daily match, refund log.</p></div>
+          <h2>Keep</h2>
+          <div class="grid g4 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/qr-code.svg" alt=""></span><strong>Standard, not a duty</strong></div>
+            <div class="ico-tile"><span class="glyph amber"><img class="ico-img" src="../assets/icons/badge-percent.svg" alt=""></span><strong>MDR hides</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/clock.svg" alt=""></span><strong>Beep ≠ bank</strong></div>
+            <div class="ico-tile"><span class="glyph green"><img class="ico-img" src="../assets/icons/repeat.svg" alt=""></span><strong>Reconcile 3 numbers</strong></div>
           </div>
         </div>
         <aside class="notes">Close.</aside>
       </section>
 
+      <section class="slide" id="slide-14">
+        <div class="slide-inner">
+          <h2>Assignment</h2>
+          <div class="grid g2 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/eye.svg" alt=""></span><strong>Watch one QRIS</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/calculator.svg" alt=""></span><strong>Estimate MDR</strong></div>
+            <div class="ico-tile"><span class="glyph accent"><img class="ico-img" src="../assets/icons/receipt.svg" alt=""></span><strong>Journals</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/file-text.svg" alt=""></span><strong>Cut-off note</strong></div>
+          </div>
+        </div>
+        <aside class="notes">Due next session. One page. Next: Session 07 CRM. Dismiss.</aside>
+      </section>
+
       <section class="slide" id="slide-15">
         <div class="slide-inner">
-          <p class="kicker">Take home</p>
-          <h2>Assignment</h2>
-          <div class="card">
-            <p>Compare two ways a food stall could get paid — e.g. QRIS-only vs QRIS + one e-wallet app vs a gateway on a simple site. One page:</p>
-            <ul class="list">
-              <li>Customer experience vs merchant settlement delay</li>
-              <li>Fee treatment on the books (even if you must assume a band)</li>
-              <li>One control you would insist on</li>
-              <li>Do <em>not</em> recommend based on a remembered 2024 blog rate</li>
-            </ul>
+          <h2>Next</h2>
+          <div class="tile" style="background:var(--navy);color:#fff;border:0;flex:1;justify-content:center">
+            <p class="label" style="color:#FFB3C2">Session 07</p>
+            <h3>CRM &amp; Customer Experience</h3>
           </div>
-          <div class="callout amber">Next — <strong>Session 07 CRM &amp; Customer Experience</strong>: journeys, retention math, and loyalty points that are almost a liability.</div>
         </div>
-        <aside class="notes">Old assignment was GoPay vs OVO vs Dana for a delivery app. We kept a comparison but made it book-centric.</aside>
+        <aside class="notes">Retention math they already met. AR aging is a CRM report.</aside>
       </section>
 
       <footer class="chrome">
@@ -273,12 +209,11 @@
           <span data-counter>1 / 15</span>
           <button type="button" data-next aria-label="Next slide">→</button>
         </div>
-        <span>06 · Payments</span>
+        <span></span>
       </footer>
       <div class="progress" aria-hidden="true"><span></span></div>
     </div>
   </div>
-
   <div class="help" role="dialog" aria-label="Keyboard shortcuts">
     <div class="help-card">
       <h2>Shortcuts</h2>

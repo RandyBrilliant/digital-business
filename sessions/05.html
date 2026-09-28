@@ -3,272 +3,200 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Session 05 — Data Analytics &amp; Business Intelligence</title>
+  <title>Session 05 — Data Analytics & Business Intelligence</title>
   <link rel="icon" href="../assets/img/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/deck.css">
 </head>
 <body class="deck-body" data-deck-title="Session 05 — Analytics">
   <div class="viewport">
     <div class="stage" role="main">
-
       <section class="slide slide-title ink is-active" id="slide-1">
         <div class="slide-inner">
-          <p class="kicker">Session 05 · Digital Business</p>
-          <h1>Data Analytics &amp;<br>Business Intelligence</h1>
-          <p class="lede">From the financial statements to unit economics — and the dashboards that must reconcile to both.</p>
-          <div class="chips">
-            <span class="chip amber">analitik</span>
-            <span class="chip">KPI</span>
-            <span class="chip navy">audit trail</span>
+          <p class="kicker">Session 05</p>
+          <h1>Analytics<br>&amp; BI</h1>
+          <div class="grid g3" style="flex:0 0 auto">
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand ga lg"><img src="../assets/brands/googleanalytics.svg" alt="Google Analytics"></div><strong>GA4</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/chart-bar.svg" alt=""></span><strong>Statements first</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/shield-check.svg" alt=""></span><strong>Tie to GL</strong><span>control</span></div>
           </div>
-          <p class="meta">Randy Brilliant · Tools named, not live-demoed (offline classroom)</p>
         </div>
-        <aside class="notes">No live GA4 login — Wi-Fi. Screenshots-in-the-head. Theme: a dashboard that cannot tie to the GL is a poster.</aside>
+        <aside class="notes">No live GA4 login — Wi-Fi. Theme: a dashboard that cannot tie to the GL is a poster.</aside>
       </section>
 
       <section class="slide" id="slide-2">
         <div class="slide-inner">
-          <p class="kicker">Agenda</p>
-          <h2>Numbers that survive a close</h2>
-          <div class="agenda">
-            <div class="agenda-item"><span class="n">01</span><div><h3>Why data</h3><p>Four levels of analytics. Guess vs evidence.</p></div></div>
-            <div class="agenda-item"><span class="n">02</span><div><h3>KPI pack</h3><p>Finance KPIs and digital KPIs on one page.</p></div></div>
-            <div class="agenda-item"><span class="n">03</span><div><h3>Unit economics</h3><p>CAC, CLV, contribution from the statements.</p></div></div>
-            <div class="agenda-item"><span class="n">04</span><div><h3>Tools</h3><p>GA4, Looker Studio, sheets, Power BI — jobs, not logos.</p></div></div>
-            <div class="agenda-item"><span class="n">05</span><div><h3>Assurance</h3><p>Fraud signals, access logs, reconciliation.</p></div></div>
-            <div class="agenda-item"><span class="n">06</span><div><h3>Studio</h3><p><span class="timer-hint">15 min</span> Design a 6-tile dashboard for Warung Sari.</p></div></div>
+          <h2>Today</h2>
+          <div class="grid g3 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/layers.svg" alt=""></span><strong>Descriptive → decide</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/file-text.svg" alt=""></span><strong>From the statements</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/calculator.svg" alt=""></span><strong>Unit economics</strong></div>
+            <div class="ico-tile"><span class="glyph accent"><img class="ico-img" src="../assets/icons/repeat.svg" alt=""></span><strong>Three ties</strong></div>
+            <div class="ico-tile"><span class="glyph green"><img class="ico-img" src="../assets/icons/users.svg" alt=""></span><strong>Cohorts</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/layout-grid.svg" alt=""></span><strong>Studio</strong></div>
           </div>
         </div>
-        <aside class="notes">Old deck claimed firms that use data beat peers by 5–6%. That is older productivity research, often misquoted. We will not treat it as a 2026 law.</aside>
+        <aside class="notes">Old deck claimed firms that use data beat peers by 5–6%. Older productivity research, often misquoted. Not a 2026 law.</aside>
       </section>
 
       <section class="slide" id="slide-3">
         <div class="slide-inner">
-          <p class="kicker">Four levels</p>
-          <h2>From ‘what happened’ to ‘do this’</h2>
-          <div class="grid grid-4">
-            <div class="card"><p class="label">Descriptive</p><h3>What happened?</h3><p>Sales by day, channel, SKU. The close.</p></div>
-            <div class="card"><p class="label">Diagnostic</p><h3>Why?</h3><p>Tuesday died because rain + no weekday promo.</p></div>
-            <div class="card"><p class="label">Predictive</p><h3>What next?</h3><p>Ramadan demand, stock-out risk, churn.</p></div>
-            <div class="card"><p class="label">Prescriptive</p><h3>Do what?</h3><p>Reorder, recut the ad set, call the slow payer.</p></div>
+          <h2>The ladder</h2>
+          <div class="flow">
+            <div class="step"><strong>What</strong></div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>Why</strong></div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>Do this</strong></div>
           </div>
-          <div class="callout">Most UMKM and most student projects should master descriptive + diagnostic. Pretend-ML is not a grade boost.</div>
         </div>
         <aside class="notes">Students love ‘AI forecast’. Pull them back to a clean daily sales file.</aside>
       </section>
 
       <section class="slide" id="slide-4">
         <div class="slide-inner">
-          <p class="kicker">Finance KPIs</p>
-          <h2>Start from the statements</h2>
-          <table class="data">
-            <thead>
-              <tr><th>KPI</th><th>Read it as</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Revenue &amp; growth</td><td>PSAK 72 revenue, not GMV</td></tr>
-              <tr><td>Gross margin</td><td>After COGS, before the pretty ads</td></tr>
-              <tr><td>Contribution margin</td><td>After variable selling and payment fees</td></tr>
-              <tr><td>Opex / revenue</td><td>Including marketing as a controllable</td></tr>
-              <tr><td>Cash conversion</td><td>Settlements lagged, stock paid in cash</td></tr>
-              <tr><td>MRR (if subscription)</td><td>Only the earned bit, please</td></tr>
-            </tbody>
-          </table>
+          <h2>Start here</h2>
+          <div class="grid g3 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/file-text.svg" alt=""></span><strong>P&L</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/wallet.svg" alt=""></span><strong>Cash</strong></div>
+            <div class="ico-tile"><span class="glyph green"><img class="ico-img" src="../assets/icons/circle-dollar-sign.svg" alt=""></span><strong>Contribution</strong></div>
+          </div>
         </div>
         <aside class="notes">If they cannot find contribution margin, they are not ready for CAC.</aside>
       </section>
 
       <section class="slide" id="slide-5">
         <div class="slide-inner">
-          <p class="kicker">Digital KPIs</p>
-          <h2>The pack that talks to finance</h2>
-          <table class="data">
-            <thead>
-              <tr><th>KPI</th><th>Formula</th><th>Trap</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>CAC</td><td>Sales + marketing ÷ new customers</td><td>Forgetting staff time and discounts</td></tr>
-              <tr><td>CLV</td><td>AOV × frequency × tenure × margin</td><td>Using revenue instead of margin</td></tr>
-              <tr><td>Conversion</td><td>Buyers ÷ visitors or clicks</td><td>Mixing sessions and users</td></tr>
-              <tr><td>Churn</td><td>Lost customers ÷ start of period</td><td>Ignoring silent one-time buyers</td></tr>
-              <tr><td>NPS / CSAT</td><td>Survey scores</td><td>Treating it as cash</td></tr>
-            </tbody>
-          </table>
+          <h2>Pack for finance</h2>
+          <div class="grid g5 rows-fill">
+            <div class="metric"><div class="num">CAC</div><p class="cap"></p></div>
+            <div class="metric"><div class="num">CLV</div><p class="cap"></p></div>
+            <div class="metric"><div class="num">CR</div><p class="cap"></p></div>
+            <div class="metric"><div class="num">AOV</div><p class="cap"></p></div>
+            <div class="metric"><div class="num">Refunds</div><p class="cap"></p></div>
+          </div>
         </div>
-        <aside class="notes">NPS is useful and not a P&L line. Old deck listed industry conversion ‘averages’ as if they were laws — we skip fake precision.</aside>
+        <aside class="notes">NPS is useful and not a P&L line. Skip fake industry conversion averages.</aside>
       </section>
 
       <section class="slide" id="slide-6">
         <div class="slide-inner">
-          <p class="kicker">Worked example</p>
-          <h2>Unit economics from a simple P&amp;L</h2>
-          <table class="data">
-            <thead>
-              <tr><th>Kopi Nusantara · month (teaching)</th><th class="num">Rp 000</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Revenue</td><td class="num">48,000</td></tr>
-              <tr><td>COGS</td><td class="num">(18,240)</td></tr>
-              <tr><td>Payment fees + paper cups variable</td><td class="num">(1,200)</td></tr>
-              <tr><td>Marketing</td><td class="num">(2,400)</td></tr>
-              <tr><td>Rent + payroll + utilities</td><td class="num">(19,000)</td></tr>
-              <tr><td>New customers this month</td><td class="num">80 people</td></tr>
-            </tbody>
-          </table>
-          <div class="grid grid-3">
-            <div class="stat"><div class="num">59%</div><p class="cap">Contribution before marketing</p></div>
-            <div class="stat"><div class="num">Rp 30k</div><p class="cap">CAC if all 2.4jt is acquisition</p></div>
-            <div class="stat"><div class="num">?</div><p class="cap">CLV — you need repeat, not hope</p></div>
+          <h2>Warung Sari P&L</h2>
+          <div class="grid g3 rows-fill">
+            <div class="metric"><div class="num">48jt</div><p class="cap">Sales</p></div>
+            <div class="metric"><div class="num">18.2jt</div><p class="cap">Var. cost</p></div>
+            <div class="metric"><div class="num">59.5%</div><p class="cap">After mktg?</p></div>
           </div>
         </div>
-        <aside class="notes">(48-18.24-1.2)/48 = 28.56/48 = 59.5%. Marketing is below contribution here so you can see CAC as a use of surplus. If they have no repeat data, they must not invent CLV.</aside>
+        <aside class="notes">(48-18.24-1.2)/48 = 59.5% if marketing sits below contribution so you can see CAC as a use of surplus. If they have no repeat data, they must not invent CLV.</aside>
       </section>
 
       <section class="slide" id="slide-7">
         <div class="slide-inner">
-          <p class="kicker">Tools · jobs not logos</p>
-          <h2>What we will name in this course</h2>
-          <div class="grid grid-3">
-            <div class="card"><p class="label">Source</p><h3>POS, bank, platform, GA4</h3><p>Where the event happened. Export beats screenshot.</p></div>
-            <div class="card"><p class="label">Model</p><h3>Sheet or warehouse</h3><p>One date, one ID, one amount. Looker Studio and Power BI only look as clean as this.</p></div>
-            <div class="card"><p class="label">Story</p><h3>Dashboard</h3><p>Six tiles a manager will actually use. Share the link; keep the file.</p></div>
+          <h2>Tools we will name</h2>
+          <div class="grid g3 rows-fill">
+            <div class="logo-cell" style="background:#fff;border:1px solid var(--line);border-radius:22px;justify-content:center;gap:14px"><div class="brand ga lg"><img src="../assets/brands/googleanalytics.svg" alt="GA4"></div><strong>GA4</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/file-text.svg" alt=""></span><strong>Sheets</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/calculator.svg" alt=""></span><strong>Jurnal / Accurate</strong></div>
           </div>
-          <p class="source">GA4 is event-based. Looker Studio is Google’s free dashboard layer. Power BI is the usual campus / intern tool. Prices move — check current SKUs before you quote them.</p>
         </div>
-        <aside class="notes">Old deck quoted Power BI at US$10/user. Dropped. Meta Business Suite is fine to mention as a channel analytics pane, not a GL.</aside>
+        <aside class="notes">Dropped Power BI US$10/user. Meta Business Suite is a channel pane, not a GL.</aside>
       </section>
 
       <section class="slide" id="slide-8">
         <div class="slide-inner">
-          <p class="kicker">Reconcile or it is fiction</p>
-          <h2>Three ties every week</h2>
-          <div class="grid grid-3">
-            <div class="card"><p class="label">01</p><h3>Platform ↔ bank</h3><p>Settlement file vs credits. Missing days are missing revenue or missing fees.</p></div>
-            <div class="card"><p class="label">02</p><h3>Ads manager ↔ GL</h3><p>Served spend vs prepaid vs expense. Dashboards lie in timezone and attribution.</p></div>
-            <div class="card"><p class="label">03</p><h3>POS ↔ tax</h3><p>Omzet vs e-Faktur / PPh basis. Coretax will not invent your missing notes.</p></div>
+          <h2>Three ties</h2>
+          <div class="flow">
+            <div class="step"><strong>Platform</strong></div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>Bank</strong></div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>Books</strong></div>
           </div>
         </div>
-        <aside class="notes">This is the accountant’s BI. If they remember one slide, this is it.</aside>
+        <aside class="notes">If they remember one slide, this is it. Ads, POS, tax too.</aside>
       </section>
 
       <section class="slide" id="slide-9">
         <div class="slide-inner">
-          <p class="kicker">Fraud and cyber</p>
-          <h2>Analytics as a control</h2>
-          <div class="grid grid-2">
-            <div class="card">
-              <p class="label">Signals worth a look</p>
-              <ul class="list">
-                <li>Refunds clustered on one staff PIN</li>
-                <li>Ad spend spikes at 02:00</li>
-                <li>Bank payout to a new personal account</li>
-                <li>GMV up, bank down</li>
-              </ul>
-            </div>
-            <div class="card">
-              <p class="label">Access</p>
-              <p>Who can export, who can withdraw, who can change the pixel. Analytics without access control is a leak with charts.</p>
-            </div>
-          </div>
-          <div class="chips">
-            <span class="chip brick">kecurangan</span>
-            <span class="chip navy">jejak audit</span>
-            <span class="chip">hak akses</span>
+          <h2>Analytics as control</h2>
+          <div class="grid g3 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/trending-down.svg" alt=""></span><strong>Outliers</strong></div>
+            <div class="ico-tile"><span class="glyph accent"><img class="ico-img" src="../assets/icons/repeat.svg" alt=""></span><strong>Refund spikes</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/shield-check.svg" alt=""></span><strong>Access log</strong></div>
           </div>
         </div>
-        <aside class="notes">Keep it UMKM-scale. No need for ACL theatre. Preview that AI can help flag outliers — Session 08/09 — but a sorted refund table is enough today.</aside>
+        <aside class="notes">UMKM-scale. A sorted refund table is enough. AI can help flag outliers later.</aside>
       </section>
 
       <section class="slide" id="slide-10">
         <div class="slide-inner">
-          <p class="kicker">Cohorts, simply</p>
-          <h2>When they arrived matters</h2>
-          <p class="lede">A cohort is everyone who first bought in the same week or month. Ask: are January buyers still here in March? If not, your CAC was a rental, not an asset.</p>
-          <div class="grid grid-2">
-            <div class="card"><p class="label">Café version</p><p>Guests who first came during a campus promo. How many returned without a second voucher?</p></div>
-            <div class="card"><p class="label">Seller version</p><p>Buyers from a live-sale week. Return rate and refund rate vs organic buyers.</p></div>
+          <h2>Cohorts</h2>
+          <div class="grid g2 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/calendar-days.svg" alt=""></span><strong>When they arrived</strong></div>
+            <div class="ico-tile"><span class="glyph green"><img class="ico-img" src="../assets/icons/repeat.svg" alt=""></span><strong>Did they return?</strong></div>
           </div>
         </div>
-        <aside class="notes">No need for a cohort matrix on screen. The idea is enough. Then a sample dashboard layout.</aside>
+        <aside class="notes">The idea is enough. No cohort matrix required on screen.</aside>
       </section>
 
       <section class="slide" id="slide-11">
         <div class="slide-inner">
-          <p class="kicker">A six-tile spine</p>
-          <h2>What Warung Sari’s week could look like</h2>
-          <div class="grid grid-3">
-            <div class="stat"><div class="num">Sales</div><p class="cap">Tied to GL revenue</p></div>
-            <div class="stat"><div class="num">Fees</div><p class="cap">MDR + platform vs GL</p></div>
-            <div class="stat"><div class="num">Cash</div><p class="cap">Settled vs still receivable</p></div>
-            <div class="stat"><div class="num">Tickets</div><p class="cap">POS count / AOV</p></div>
-            <div class="stat"><div class="num">Ads</div><p class="cap">Served spend vs prepaid</p></div>
-            <div class="stat"><div class="num">Exceptions</div><p class="cap">Refunds, voids, new payout account</p></div>
+          <h2>Studio</h2>
+          <div class="grid g3 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/layout-grid.svg" alt=""></span><strong>6 tiles</strong></div>
+            <div class="ico-tile"><span class="glyph accent"><img class="ico-img" src="../assets/icons/x.svg" alt=""></span><strong>No likes</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/landmark.svg" alt=""></span><strong>Lender-safe</strong></div>
           </div>
         </div>
-        <aside class="notes">This is the answer key for the studio, not a live tool.</aside>
+        <aside class="notes">Six tiles for Warung Sari. Hear two pairs. Ban number of likes as a core tile. Safest lender KPI is cash / contribution, not vanity.</aside>
       </section>
 
       <section class="slide" id="slide-12">
         <div class="slide-inner">
-          <p class="kicker">Studio</p>
-          <h2>Six tiles for Warung Sari</h2>
-          <p><span class="timer-hint">15 minutes · pairs</span></p>
-          <div class="card">
-            <p>Design a one-screen weekly dashboard. For each tile: name, source system, formula, and the GL line it must match (or “no GL — qualitative”).</p>
-            <ul class="list">
-              <li>At least two finance tiles and two digital tiles</li>
-              <li>One fraud / exception tile</li>
-              <li>One tile you refuse to show the owner (vanity) — and why</li>
-            </ul>
+          <h2>Which KPI for a lender?</h2>
+          <div class="grid g2 rows-fill">
+            <div class="tile"><p class="label">A</p><h3>Followers</h3></div>
+            <div class="tile" style="border:3px solid var(--green)"><p class="label">B</p><h3>Contribution · cash</h3></div>
           </div>
-        </div>
-        <aside class="notes">Hear two pairs. Ban ‘number of likes’ as a core tile.</aside>
-      </section>
-
-      <section class="slide" id="slide-13">
-        <div class="slide-inner">
-          <p class="kicker">Quick check</p>
-          <h2>Which KPI is safest to put on a lender slide?</h2>
-          <div class="grid grid-2">
-            <div class="card"><p class="label">A</p><p>TikTok views, because they grew 400%.</p></div>
-            <div class="card"><p class="label">B</p><p>Contribution margin and cash from settlements, with CAC as a footnote.</p></div>
-            <div class="card"><p class="label">C</p><p>GMV, labelled as revenue.</p></div>
-            <div class="card"><p class="label">D</p><p>NPS 72, with no sales data.</p></div>
-          </div>
-          <p class="source">Correct: B. Views and NPS can live in an appendix.</p>
         </div>
         <aside class="notes">Hands. B.</aside>
       </section>
 
-      <section class="slide" id="slide-14">
+      <section class="slide" id="slide-13">
         <div class="slide-inner">
-          <p class="kicker">Recap</p>
-          <h2>Four things to keep</h2>
-          <div class="grid grid-2">
-            <div class="card"><p class="label">01</p><h3>Levels</h3><p>Describe and diagnose before you predict.</p></div>
-            <div class="card"><p class="label">02</p><h3>Statements first</h3><p>Unit economics inherit the P&amp;L’s definitions.</p></div>
-            <div class="card"><p class="label">03</p><h3>Tie it out</h3><p>Platform, ads, POS, bank, tax.</p></div>
-            <div class="card"><p class="label">04</p><h3>Controls</h3><p>A dashboard is also an access list.</p></div>
+          <h2>Keep</h2>
+          <div class="grid g4 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/file-text.svg" alt=""></span><strong>Statements first</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/repeat.svg" alt=""></span><strong>Three ties</strong></div>
+            <div class="ico-tile"><span class="glyph accent"><img class="ico-img" src="../assets/icons/calculator.svg" alt=""></span><strong>Unit economics</strong></div>
+            <div class="ico-tile"><span class="glyph green"><img class="ico-img" src="../assets/icons/shield-check.svg" alt=""></span><strong>Control</strong></div>
           </div>
         </div>
         <aside class="notes">Assignment uses a demo mindset without requiring a live GA account if campus blocks it.</aside>
       </section>
 
-      <section class="slide" id="slide-15">
+      <section class="slide" id="slide-14">
         <div class="slide-inner">
-          <p class="kicker">Take home</p>
           <h2>Assignment</h2>
-          <div class="card">
-            <p>Build a one-page dashboard (Looker Studio, Power BI, or a well-designed sheet) with six KPIs for a real or fictional UMKM:</p>
-            <ul class="list">
-              <li>Each tile: formula + source + GL tie (or “qualitative”)</li>
-              <li>One paragraph on a fraud exception you would watch</li>
-              <li>If you cannot access GA4, use a provided sample sheet — say so on the page</li>
-            </ul>
+          <div class="grid g2 rows-fill">
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/layout-grid.svg" alt=""></span><strong>6-tile dashboard</strong></div>
+            <div class="ico-tile"><span class="glyph blue"><img class="ico-img" src="../assets/icons/repeat.svg" alt=""></span><strong>One tie-out</strong></div>
+            <div class="ico-tile"><span class="glyph amber"><img class="ico-img" src="../assets/icons/calculator.svg" alt=""></span><strong>One ratio</strong></div>
+            <div class="ico-tile"><span class="glyph"><img class="ico-img" src="../assets/icons/file-text.svg" alt=""></span><strong>Source note</strong></div>
           </div>
-          <div class="callout amber">Next — <strong>Session 06 Digital Payment Systems</strong>: QRIS, e-wallets, MDR, and reconciling the settlement to the sales journal.</div>
         </div>
         <aside class="notes">Offer a sample CSV if you can. Do not fail students for campus Google blocks.</aside>
+      </section>
+
+      <section class="slide" id="slide-15">
+        <div class="slide-inner">
+          <h2>Next</h2>
+          <div class="tile" style="background:var(--navy);color:#fff;border:0;flex:1;justify-content:center">
+            <p class="label" style="color:#FFB3C2">Session 06</p>
+            <h3>Digital Payments</h3>
+          </div>
+        </div>
+        <aside class="notes">QRIS, MDR, beep ≠ bank.</aside>
       </section>
 
       <footer class="chrome">
@@ -278,12 +206,11 @@
           <span data-counter>1 / 15</span>
           <button type="button" data-next aria-label="Next slide">→</button>
         </div>
-        <span>05 · Analytics</span>
+        <span></span>
       </footer>
       <div class="progress" aria-hidden="true"><span></span></div>
     </div>
   </div>
-
   <div class="help" role="dialog" aria-label="Keyboard shortcuts">
     <div class="help-card">
       <h2>Shortcuts</h2>
