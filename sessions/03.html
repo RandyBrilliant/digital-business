@@ -10,6 +10,17 @@
     /* Session 03 only — fill the 16:9 stage without changing other decks */
     .s03 .slide-inner { gap: 18px; }
     .s03 .row { min-height: 0; }
+    .s03 .col > .card,
+    .s03 .col > .callout,
+    .s03 .col > .stat { flex: 1; }
+    .s03 .col > .card h3 { font-size: 34px; }
+    .s03 .col > .card p,
+    .s03 .col > .card li { font-size: 28px; }
+    .s03 .col > .card .list,
+    .s03 .card .list {
+      flex: 1;
+      justify-content: space-evenly;
+    }
     .s03 .grid { flex: 1; grid-auto-rows: 1fr; }
     .s03 .card {
       display: flex;
@@ -61,17 +72,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .s03 .title-art .ghost {
-      position: absolute;
-      font-family: "Source Serif 4", Georgia, serif;
-      font-size: 320px;
-      font-weight: 600;
-      color: #fff;
-      opacity: 0.07;
-      line-height: 0.8;
-      letter-spacing: -0.06em;
-      pointer-events: none;
     }
     .s03 .title-funnel {
       position: relative;
@@ -171,7 +171,6 @@
             <p class="meta">Randy Brilliant · English lecture · Indonesian key terms on the chips</p>
           </div>
           <div class="title-art" aria-hidden="true">
-            <div class="ghost">03</div>
             <div class="title-funnel" role="img" aria-label="Marketing funnel, Awareness wide at the top">
               <div class="funnel-band w1">Awareness</div>
               <div class="funnel-band w2">Consideration</div>
@@ -338,6 +337,11 @@
                   <li>Google Ads on “coffee shop Medan” and “café near campus”</li>
                 </ul>
               </div>
+              <div class="card">
+                <p class="label">Catchment test</p>
+                <h3>Name who should see it</h3>
+                <p>Students, offices, weekend families. A 200k view from Jakarta is the wrong wide top.</p>
+              </div>
             </div>
             <div class="side-panel">
               <p class="label" style="letter-spacing:0.12em;text-transform:uppercase;font-weight:700;font-size:16px;color:var(--teal-deep)">Accountant watch</p>
@@ -416,6 +420,11 @@
                 </ul>
               </div>
               <div class="callout amber">Acquisition is usually more expensive than retention — often cited in a wide band of about 5–25× depending on the industry. Do not treat “5×” as a law. Compute <em>your</em> CAC vs the cost of a stamp-card freebie.</div>
+              <div class="card">
+                <p class="label">Rule of thumb</p>
+                <h3>Keep the guests you already paid for</h3>
+                <p>A Tuesday special that brings a first-time guest back is cheaper than another Reels burst that only finds strangers.</p>
+              </div>
             </div>
             <div class="side-panel">
               <p class="label" style="letter-spacing:0.12em;text-transform:uppercase;font-weight:700;font-size:16px;color:var(--teal-deep)">Loyalty on the ledger</p>
@@ -447,7 +456,11 @@
             </div>
             <div class="card">
               <p class="label">Why accountants care</p>
-              <p>Word of mouth has no media invoice — and a very real cost if a referral discount is untracked. Paid reviews without disclosure are both an ethics problem and a tax-documentation problem.</p>
+              <ul class="list">
+                <li>Word of mouth has no media invoice — the discount still does</li>
+                <li>Untracked referral codes vanish into “miscellaneous”</li>
+                <li>Paid reviews without disclosure are an ethics and tax-file problem</li>
+              </ul>
             </div>
           </div>
           <div class="callout">Advocacy is the cheapest acquisition channel you cannot buy directly. You can only earn it — then measure referral codes so the discount does not vanish into “miscellaneous.”</div>
@@ -530,7 +543,11 @@
                   <li>Owner story: why the blend is named after a harvest</li>
                 </ul>
               </div>
-              <div class="callout">The 80 / 20 habit: most posts help or entertain. A minority sell. A feed that is only discount codes trains people to wait.</div>
+              <div class="callout">The 80 / 20 habit: most posts help or entertain. A minority sell. A feed that is only discount codes trains people to wait for the next promo.</div>
+              <div class="card">
+                <p class="label">What to measure</p>
+                <p>Saves, profile visits, and return visits — not just views. A Reel that does not send anyone to the room is entertainment, not a campaign.</p>
+              </div>
             </div>
             <div class="side-panel">
               <p class="label" style="letter-spacing:0.12em;text-transform:uppercase;font-weight:700;font-size:16px;color:var(--teal-deep)">On the books</p>
