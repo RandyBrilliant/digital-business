@@ -80,6 +80,7 @@ body.deck-body {
 .stage {
   width: var(--stage-w);
   height: var(--stage-h);
+  flex: 0 0 auto;
   position: relative;
   background: var(--paper);
   overflow: hidden;
@@ -273,6 +274,7 @@ p, li, td, th { font-size: 32px; line-height: 1.3; }
   min-height: 0;
   height: auto;
 }
+.tile span { font-size: 28px; font-weight: 600; color: var(--muted); }
 .slide.ink .tile {
   background: #143052;
   border-color: #1E4066;
@@ -294,6 +296,13 @@ p, li, td, th { font-size: 32px; line-height: 1.3; }
   min-height: 0;
   flex: 0 0 auto;
   align-content: start;
+}
+.grid:has(.slab),
+.grid:has(.metric),
+.grid:has(.brand-tile),
+.grid:has(.review) {
+  flex: 1;
+  align-content: stretch;
 }
 .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -952,6 +961,7 @@ table.data th { background: #E8EEF6; font-size: 16px; text-transform: uppercase;
   flex: 1;
   min-height: 0;
 }
+.brand-grid.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .brand-grid.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .brand-row {
   display: flex;
