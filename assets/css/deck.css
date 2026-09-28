@@ -422,7 +422,6 @@ table.data th.num { text-align: right; font-variant-numeric: tabular-nums; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 28px;
-  flex: 1;
 }
 
 .agenda-item {
@@ -523,8 +522,11 @@ table.data th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 /* Title slide */
 .slide-title .slide-inner {
-  justify-content: flex-end;
-  padding-bottom: 100px;
+  justify-content: center;
+  padding-bottom: 88px;
+}
+.slide-title h1 {
+  max-width: 16ch;
 }
 .slide-title .meta {
   display: flex;

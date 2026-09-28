@@ -77,6 +77,25 @@ assets/img/mark.svg        Course mark
 | 09 SME transformation | `sessions/09.html` | 15 |
 | 10 Capstone | `sessions/10.html` | 15 |
 
+## Facts corrected vs the old site
+
+| Old claim | What we teach now | Source |
+| --- | --- | --- |
+| Tokopedia is a GoTo company | TikTok / ByteDance has been the controlling shareholder (75.01%) since 31 Jan 2024; GoTo holds 24.99% | Reuters, 31 Jan 2024; GoTo disclosure |
+| Bukalapak as a current physical marketplace | Closed physical-goods marketplace in early 2025 (last orders into February); focus on virtual goods and Mitra | Reuters, 8 Jan 2025; Jakarta Post, 17 Jan 2025 |
+| Bukalapak was the first tech company on IDX | First Indonesian **unicorn** to IPO on IDX (BUKA, Aug 2021), not the first technology listing | Contemporary IPO coverage |
+| Platform cards labelled “2024” with 100M+ MAU | No stale year labels; no memorised MAU figures | Dropped as unverified for 2026 |
+| “Only 13% of SMEs are digital” | Retired. Onboarding is widespread; depth (books, tax, margin) is the gap | Government and trade sources disagree on a single % |
+| Mitra Bukalapak “30 million+” | Not used. Last widely published company figures were lower and dated | Wikipedia/company history through 2023; treat live counts as unverified |
+| Retention “5×” vs “5–25×” | Taught as a **5–25×** study range; students must compute their own CAC vs CRC | Amy Gallo, HBR, 29 Oct 2014 |
+| “QRIS is mandatory for merchants” | QRIS is the national **QR standard**; PSPs that offer QR must use it. A cash-only stall is not breaking a QR law | Bank Indonesia QRIS pages |
+| S09 roadmap every step `[DONE]` | Every step is **to-do / in progress / blocked** | Template leftover |
+| S10 “code review” | Presentation + Q&A. Not a programming course | — |
+| Erigo “Rp 300B”, Kopi Kenangan “US$1B”, Netflix price points, Power BI “US$10”, TikTok “min Rp 200k/day”, “2–5%” marketplace fee | Removed or labelled as teaching illustrations | Unverified or too perishable |
+| Jl. Padang Galoba | Dropped | Address typo |
+
+**Still treat with care:** BI QRIS user/merchant counts (June 2026 release — dated on the slide). Marketplace fee bands change by category and month — look up the live seller centre. Coretax / e-Faktur process details can move; we teach the idea, not a filing walkthrough.
+
 ## License
 
 Course materials: use and adapt for teaching. Fonts: SIL Open Font License (Source Serif 4, Source Sans 3).
