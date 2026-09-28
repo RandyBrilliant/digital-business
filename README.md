@@ -61,6 +61,22 @@ assets/img/mark.svg        Course mark
 - Tables, cards, funnels, and journal layouts — not monospaced comment dumps.
 - Accounting and Indonesian tax/finance angles where they fit the session.
 
+## Slide counts
+
+| Session | File | Slides |
+| --- | --- | ---: |
+| Hub | `index.html` | — |
+| 01 Introduction | `sessions/01.html` | 17 |
+| 02 E-Commerce | `sessions/02.html` | 15 |
+| 03 Digital Marketing | `sessions/03.html` | 23 |
+| 04 Social Media | `sessions/04.html` | 15 |
+| 05 Analytics | `sessions/05.html` | 15 |
+| 06 Payments | `sessions/06.html` | 15 |
+| 07 CRM | `sessions/07.html` | 15 |
+| 08 Strategy | `sessions/08.html` | 15 |
+| 09 SME transformation | `sessions/09.html` | 15 |
+| 10 Capstone | `sessions/10.html` | 15 |
+
 ## License
 
 Course materials: use and adapt for teaching. Fonts: SIL Open Font License (Source Serif 4, Source Sans 3).
