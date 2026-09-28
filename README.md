@@ -50,8 +50,10 @@ index.html                 Course hub
 sessions/01.html … 10.html One deck per session
 assets/css/deck.css        Shared visual system + print stylesheet
 assets/js/engine.js        Scaling, hash nav, presenter, overview
-assets/fonts/              Self-hosted Source Serif 4 + Source Sans 3
-assets/img/mark.svg        Course mark
+assets/fonts/              Plus Jakarta Sans (OFL)
+assets/icons/              Lucide icons (ISC)
+assets/brands/             Simple Icons (CC0) + lettermarks
+assets/img/                Course mark + Unsplash photos
 ```
 
 ## Design rules
@@ -98,4 +100,4 @@ assets/img/mark.svg        Course mark
 
 ## License
 
-Course materials: use and adapt for teaching. Fonts: SIL Open Font License (Source Serif 4, Source Sans 3).
+Course materials: use and adapt for teaching. Fonts: Plus Jakarta Sans (SIL OFL). Icons: Lucide (ISC). Brand SVGs: Simple Icons (CC0). Photos: Unsplash License.
