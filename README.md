@@ -4,7 +4,7 @@ Static slide site for a 10-session, 2-hour **Digital Business** course taught to
 
 Lecturer: **Randy Brilliant**.
 
-Works fully offline: self-hosted fonts, no CDN, no server required. Open `index.html` or deploy the repo to GitHub Pages.
+Works fully offline: self-hosted fonts, icons, brand marks, and photos. No CDN, no server required. Open `index.html` or deploy the repo to GitHub Pages.
 
 ## Run locally
 

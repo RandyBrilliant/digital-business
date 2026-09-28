@@ -140,13 +140,13 @@
     presenter = window.open("", "db-presenter", "width=1100,height=800");
     if (!presenter) return;
     presenter.document.write("<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>Presenter · Digital Business</title><style>" +
-      "html,body{margin:0;height:100%;background:#1b1914;color:#f6f1e8;font-family:'Source Sans 3',Segoe UI,sans-serif}" +
+      "html,body{margin:0;height:100%;background:#0A1B33;color:#F4F7FB;font-family:'Plus Jakarta Sans',Segoe UI,sans-serif}" +
       ".wrap{display:grid;grid-template-rows:auto 1fr auto;height:100%;padding:28px 32px;gap:18px;box-sizing:border-box}" +
-      ".top{display:flex;justify-content:space-between;align-items:baseline;color:#d5cbb8}" +
-      "h1{font-size:28px;margin:0 0 8px;font-family:Georgia,serif}" +
+      ".top{display:flex;justify-content:space-between;align-items:baseline;color:#8EA0B5}" +
+      "h1{font-size:28px;margin:0 0 8px}" +
       ".notes{font-size:24px;line-height:1.45;white-space:pre-wrap}" +
-      ".next{border-top:1px solid #3b342c;padding-top:16px;color:#d5cbb8;font-size:20px}" +
-      ".timer{font-size:42px;font-variant-numeric:tabular-nums}" +
+      ".next{border-top:1px solid #1E3A5F;padding-top:16px;color:#8EA0B5;font-size:20px}" +
+      ".timer{font-size:42px;font-variant-numeric:tabular-nums;color:#FF3B5C}" +
       "</style></head><body><div class='wrap'>" +
       "<div class='top'><div id='pos'></div><div><span id='clock'></span> · <span class='timer' id='timer'></span></div></div>" +
       "<div><h1 id='title'></h1><div class='notes' id='notes'></div></div>" +
