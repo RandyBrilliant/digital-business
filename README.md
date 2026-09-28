@@ -52,16 +52,17 @@ assets/css/deck.css        Shared visual system + print stylesheet
 assets/js/engine.js        Scaling, hash nav, presenter, overview
 assets/fonts/              Plus Jakarta Sans (OFL)
 assets/icons/              Lucide icons (ISC)
-assets/brands/             Simple Icons (CC0) + lettermarks
-assets/img/                Course mark + Unsplash photos
+assets/brands/             Simple Icons (CC0) + wordmark badges
+assets/img/photos/         Bundled Unsplash photos
 ```
 
 ## Design rules
 
-- One 1920×1080 stage, scaled to the projector (reveal.js-style).
-- No code-editor chrome, no programming-course leftovers.
-- Tables, cards, funnels, and journal layouts — not monospaced comment dumps.
-- Accounting and Indonesian tax/finance angles where they fit the session.
+- One 1920×1080 stage, scaled to the projector (reveal.js-style). The stage does not shrink with the window.
+- Headlines 56–80px, body/labels ≥28px, card icons 64–120px, big numbers 80–120px.
+- Cards hug content; leftover space is a photo, funnel, chart, or color slab — not an empty white tile.
+- Real Simple Icons marks when the icon is published (Shopee, Instagram, WhatsApp, Gmail, GA4, Meta, TikTok, Bukalapak, Blogger). Otherwise a wordmark in the brand color (Tokopedia, QRIS, GoPay, OVO, DANA, Google Ads, Lazada, Blibli).
+- `node tools/qa-slides.mjs` flags overflow, type under 28px at design size, and slides with more than 45% empty stage.
 
 ## Slide counts
 
